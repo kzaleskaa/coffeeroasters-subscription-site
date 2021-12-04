@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+  width: 100vw;
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    flex-direction: row;
+  }
+}

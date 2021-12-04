@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+}

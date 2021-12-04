@@ -1,0 +1,11 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.socials li:hover {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(586%)
+    hue-rotate(323deg) brightness(104%) contrast(98%);
+}
