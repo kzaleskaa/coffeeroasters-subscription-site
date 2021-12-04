@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Route, Routes, Navigate } from "react-router";
+
+import "./App.css";
+
+import Layout from "./components/layout/Layout";
+import Loading from "./components/UI/Loading";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
+const CreatePlan = React.lazy(() => import("./pages/CreatePlan"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home/" element={<Home />} />
+          <Route path="/about/" element={<About />} />
+          <Route path="/create-plan/" element={<CreatePlan />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 
