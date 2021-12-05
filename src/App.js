@@ -1,8 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, Routes, Navigate } from "react-router";
 
-import "./App.css";
-
 import Layout from "./components/layout/Layout";
 import Loading from "./components/UI/Loading";
 

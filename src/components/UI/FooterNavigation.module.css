@@ -1,0 +1,23 @@
+.footer-nav {
+  text-align: center;
+}
+
+.footer-nav li {
+  text-transform: uppercase;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: var(--grey);
+  margin: 10px 0px;
+}
+
+.footer-nav li:hover {
+  color: var(--light-cream);
+}
+
+@media (min-width: 1024px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 36px;
+  }
+}
