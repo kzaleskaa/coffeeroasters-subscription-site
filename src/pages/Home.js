@@ -5,7 +5,7 @@ import Collection from "../components/home/Collection";
 import Choose from "../components/home/Choose";
 import Work from "../components/home/Work";
 
-import data from "../text-home.json";
+import data from "../text-files/text-home.json";
 
 const Home = () => {
   return (

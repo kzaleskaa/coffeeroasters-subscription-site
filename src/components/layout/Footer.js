@@ -1,6 +1,6 @@
 import logo from "../../assets/shared/desktop/logo-footer.svg";
-import FooterNavigation from "../UI/FooterNavigation";
-import SocialList from "../UI/SocialList";
+import FooterNavigation from "./FooterNavigation";
+import SocialList from "./SocialList";
 
 import styles from "./Footer.module.css";
 

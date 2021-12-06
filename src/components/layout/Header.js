@@ -1,6 +1,6 @@
 import ReactLogo from "../../assets/shared/desktop/logo.svg";
 
-import MainNavigation from "../UI/MainNavigation";
+import MainNavigation from "./MainNavigation";
 
 import styles from "./Header.module.css";
 

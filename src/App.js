@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Route, Routes, Navigate } from "react-router";
 
 import Layout from "./components/layout/Layout";
-import Loading from "./components/UI/Loading";
+import Loading from "./components/layout/Loading";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));
