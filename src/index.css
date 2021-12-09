@@ -37,6 +37,10 @@ a:active {
   color: inherit;
 }
 
+section {
+  margin-top: 100px;
+}
+
 h1,
 h2,
 h3,
@@ -46,4 +50,27 @@ h4 {
 
 p {
   font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 68px;
+  }
+  p {
+    font-size: 24px;
+  }
 }
