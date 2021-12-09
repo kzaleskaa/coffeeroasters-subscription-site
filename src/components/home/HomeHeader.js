@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-import Container from "../layout/Container";
+import HeaderTemplate from "../layout/HeaderTemplate";
 
 import styles from "./HomeHeader.module.css";
 
 const HomeHeader = () => {
   return (
-    <Container class={styles["header-container"]}>
+    <HeaderTemplate class={styles["header-container"]}>
       <h1>Great coffee made simple.</h1>
       <p>
         Start your mornings with the world’s best coffees. Try our expertly
@@ -16,7 +16,7 @@ const HomeHeader = () => {
       <NavLink to="/create-plan" className={styles["create-btn"]}>
         Create your plan
       </NavLink>
-    </Container>
+    </HeaderTemplate>
   );
 };
 

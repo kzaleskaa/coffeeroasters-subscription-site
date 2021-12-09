@@ -1,4 +1,4 @@
-.container {
+.header-template {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
@@ -12,38 +12,38 @@
   color: var(--light-cream);
 }
 
-.container h1 {
+.header-template h1 {
   font-size: 36px;
 }
 
-.container p {
+.header-template p {
   font-size: 18px;
   line-height: 1.6;
   font-weight: 400;
 }
 
 @media (min-width: 768px) {
-  .container {
+  .header-template {
     display: grid;
     grid-template-columns: 50%;
     text-align: left;
     padding: 110px 50px;
     margin: 40px;
   }
-  .container h1 {
+  .header-template h1 {
     max-width: 11ch;
     font-size: 56px;
   }
-  .container p {
+  .header-template p {
     font-size: 24px;
   }
 }
 
 @media (min-width: 1440px) {
-  .container h1 {
+  .header-template h1 {
     font-size: 72px;
   }
-  .container p {
+  .header-template p {
     font-size: 24px;
   }
 }

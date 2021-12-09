@@ -1,10 +1,10 @@
-import Container from "../layout/Container";
+import HeaderTemplate from "../layout/HeaderTemplate";
 
 import styles from "./AboutHeader.module.css";
 
 const AboutHeader = () => {
   return (
-    <Container class={styles["about-container"]}>
+    <HeaderTemplate class={styles["about-container"]}>
       <h1>About us</h1>
       <p>
         Coffeeroasters began its journey of exotic discovery in 1999,
@@ -12,7 +12,7 @@ const AboutHeader = () => {
         dedicated to bring the perfect cup - from bean to brew - in every
         shipment.
       </p>
-    </Container>
+    </HeaderTemplate>
   );
 };
 

@@ -51,15 +51,23 @@ h4 {
 p {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
+  line-height: 1.6;
 }
 
 h2 {
   font-size: 32px;
 }
 
+h3 {
+  font-size: 26px;
+}
+
 @media (min-width: 768px) {
   h2 {
     font-size: 48px;
+  }
+  h3 {
+    font-size: 30px;
   }
   p {
     font-size: 24px;
