@@ -23,7 +23,7 @@ const Instruction = () => {
   return (
     <div>
       {DUMMY_STEPS.map((step) => (
-        <div>
+        <div key={step.number}>
           <span>{step.number}</span>
           <h3>{step.name}</h3>
           <p>{step.description}</p>
