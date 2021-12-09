@@ -1,0 +1,15 @@
+.plan-container {
+  background-image: url("../../assets/plan/mobile/image-hero-blackcup.jpg");
+}
+
+@media (min-width: 768px) {
+  .plan-container {
+    background-image: url("../../assets/plan/tablet/image-hero-blackcup.jpg");
+  }
+}
+
+@media (min-width: 1440px) {
+  .plan-container {
+    background-image: url("../../assets/plan/desktop/image-hero-blackcup.jpg");
+  }
+}

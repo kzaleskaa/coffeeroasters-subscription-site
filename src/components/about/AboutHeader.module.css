@@ -1,0 +1,15 @@
+.about-container {
+  background-image: url("../../assets/about/mobile/image-hero-whitecup.jpg");
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    background-image: url("../../assets/about/tablet/image-hero-whitecup.jpg");
+  }
+}
+
+@media (min-width: 1440px) {
+  .about-container {
+    background-image: url("../../assets/about/desktop/image-hero-whitecup.jpg");
+  }
+}

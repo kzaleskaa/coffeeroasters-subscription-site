@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  margin: 10px;
+  padding: 100px 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--light-cream);
+}
+
+.container h1 {
+  font-size: 36px;
+}
+
+.container p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50%;
+    text-align: left;
+    padding: 110px 50px;
+    margin: 40px;
+  }
+  .container h1 {
+    max-width: 11ch;
+    font-size: 56px;
+  }
+  .container p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container h1 {
+    font-size: 72px;
+  }
+  .container p {
+    font-size: 24px;
+  }
+}
