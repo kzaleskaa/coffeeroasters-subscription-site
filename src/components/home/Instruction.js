@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import styles from "./Instruction.module.css";
 
 import data from "../../text-files/text-home.json";

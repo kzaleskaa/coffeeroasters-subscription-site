@@ -1,5 +1,5 @@
-const Order = () => {
-  return <p>order summary</p>;
+const Order = (props) => {
+  return <button onClick={props.onShowModal}>Create my plan!</button>;
 };
 
 export default Order;
