@@ -1,0 +1,51 @@
+.question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.arrow {
+  height: 10px;
+  aspect-ratio: 1/1;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  transition: .4s;
+}
+
+.arrow.show {
+  transform: rotate(44deg);
+}
+
+.option {
+  background-color: var(--light-cream);
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.option:hover {
+  background-color: var(--pale-orange);
+}
+
+.options {
+  display: none;
+}
+
+.options.show {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .options {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .option {
+    width: 33%;
+  }
+}

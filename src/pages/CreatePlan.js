@@ -7,8 +7,10 @@ import Order from "../components/plan/Order";
 import PlanHeader from "../components/plan/PlanHeader";
 import Summary from "../components/plan/Summary";
 
+import data from "../text-files/preferences.json";
+
 const CreatePlan = () => {
-  const [modalIsShow, setModalIsShown] = useState(true);
+  const [modalIsShow, setModalIsShown] = useState(false);
 
   const showModalHandler = () => {
     setModalIsShown(true);
@@ -24,7 +26,7 @@ const CreatePlan = () => {
       <PlanHeader />
       <Instruction class="dark" />
       <ChooseSection />
-      <Order onShowModal={showModalHandler} />
+      <Order onShowModal={showModalHandler} data={data.preferences} />
     </>
   );
 };

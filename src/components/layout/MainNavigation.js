@@ -28,8 +28,8 @@ const MainNavigation = () => {
       <ul>
         <li>
           <NavLink
-            to="/"
-            className={(isActive) => "nav-link" + (isActive ? "active" : "")}
+            to="/home"
+            className={(navData) => (navData.isActive ? "active" : "")}
           >
             Home
           </NavLink>
@@ -37,7 +37,7 @@ const MainNavigation = () => {
         <li>
           <NavLink
             to="/about"
-            className={(isActive) => "nav-link" + (isActive ? "active" : "")}
+            className={(navData) => (navData.isActive ? "active" : "")}
           >
             About
           </NavLink>
@@ -45,7 +45,7 @@ const MainNavigation = () => {
         <li>
           <NavLink
             to="/create-plan"
-            className={(isActive) => "nav-link" + (isActive ? "active" : "")}
+            className={(navData) => (navData.isActive ? "active" : "")}
           >
             Create Plan
           </NavLink>

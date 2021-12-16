@@ -1,7 +1,7 @@
 {
   "preferences": [
     {
-      "id": "01",
+      "id": 1,
       "preference": "Preferences",
       "question": "How do you drink you coffee?",
       "options": [
@@ -23,7 +23,7 @@
       ]
     },
     {
-      " id": "02",
+      "id": 2,
       "preference": "Bean Type",
       "question": "What type of coffee?",
       "options": [
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "id": "03",
+      "id": 3,
       "preference": "Quantity",
       "question": "How much would you like?",
       "options": [
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "id": "04",
+      "id": 4,
       "preference": "Grind option",
       "question": "Want us to grind them?",
       "options": [
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "id": "05",
+      "id": 5,
       "preference": "Deliveries",
       "question": "How often should we deliver?",
       "options": [
