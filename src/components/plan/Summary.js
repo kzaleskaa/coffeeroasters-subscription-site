@@ -1,6 +1,8 @@
+import { Fragment } from "react/cjs/react.production.min";
 import Modal from "../UI/Modal";
 
 import styles from "./Summary.module.css";
+import SummaryText from "./SummaryText";
 
 const Summary = (props) => {
   return (
@@ -9,11 +11,7 @@ const Summary = (props) => {
         <h3>Order summary</h3>
       </div>
       <div className={styles.content}>
-        <p className={styles.order}>
-          “I drink my coffee as <span>Filter</span>, with a <span>Decaf </span>
-          type of bean. <span>250g</span> ground ala <span>Cafetiére</span>,
-          sent to me <span>Every Week</span>.”
-        </p>
+        <SummaryText />
         <p>
           Is this correct? You can proceed to checkout or go back to plan
           selection if something is off. Subscription discount codes can also be

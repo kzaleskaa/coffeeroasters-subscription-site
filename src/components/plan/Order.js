@@ -2,9 +2,18 @@ import { useState } from "react";
 import { Fragment } from "react/cjs/react.production.min";
 
 import styles from "./Order.module.css";
+import Summary from "./Summary";
+import SummaryText from "./SummaryText";
 
 const Order = (props) => {
   const [indexIsActive, setIndexIsActive] = useState(1);
+  const [chosenOptions, setChosenOptions] = useState([
+    "Capsule",
+    "Single origin",
+    "250g",
+    "Wholebean",
+    "Every weeke",
+  ]);
 
   const changeActiveIndexHandler = (event) => {
     setIndexIsActive((prevState) =>
@@ -12,9 +21,15 @@ const Order = (props) => {
     );
   };
 
+  function changeChoosenIndexHandler(event, index, name) {
+    let newArray = [...chosenOptions];
+    newArray[index] = name;
+    setChosenOptions(newArray);
+  }
+
   return (
     <>
-      {props.data.map((item) => {
+      {props.data.map((item, index) => {
         return (
           <div key={item.id} className={styles.choice}>
             <div
@@ -36,7 +51,18 @@ const Order = (props) => {
               }`}
             >
               {item.options.map((option) => (
-                <div key={option.id} className={styles.option}>
+                <div
+                  key={option.id}
+                  id={option.id}
+                  className={`${styles.option} ${
+                    chosenOptions[index] === option.name
+                      ? styles["choosen-option"]
+                      : ""
+                  }`}
+                  onClick={(event) =>
+                    changeChoosenIndexHandler(event, index, option.name)
+                  }
+                >
                   <h4>{option.name}</h4>
                   <p>{option.about}</p>
                 </div>
@@ -45,7 +71,7 @@ const Order = (props) => {
           </div>
         );
       })}
-      <div className={styles.choice}></div>
+      <SummaryText />
       <button onClick={props.onShowModal}>Create my plan!</button>
     </>
   );

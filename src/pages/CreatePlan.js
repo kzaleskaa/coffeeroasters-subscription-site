@@ -6,6 +6,7 @@ import Order from "../components/plan/Order";
 
 import PlanHeader from "../components/plan/PlanHeader";
 import Summary from "../components/plan/Summary";
+import Modal from "../components/UI/Modal";
 
 import data from "../text-files/preferences.json";
 

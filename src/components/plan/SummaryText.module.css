@@ -1,0 +1,9 @@
+.order {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: var(--grey);
+}
+
+.order span {
+  color: var(--dark-cyan);
+}
