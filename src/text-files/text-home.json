@@ -1,0 +1,68 @@
+{
+  "collection": [
+    {
+      "key": "p1",
+      "img": "assets/home/desktop/image-gran-espresso.png",
+      "name": "Gran Espresso",
+      "about": "Light and flavorful blend with cocoa and black pepper for an intense experience"
+    },
+    {
+      "key": "p2",
+      "img": "assets/home/desktop/image-planalto.png",
+      "name": "Planalto",
+      "about": "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
+    },
+    {
+      "key": "p3",
+      "img": "assets/home/desktop/image-piccollo.png",
+      "name": "Piccollo",
+      "about": "Mild and smooth blend featuring notes of toasted almond and dried cherry"
+    },
+    {
+      "key": "p4",
+      "img": "assets/home/desktop/image-danche.png",
+      "name": "Danche",
+      "about": "Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
+    }
+  ],
+  "reasons": [
+    {
+      "key": "r1",
+      "img": "assets/home/desktop/icon-coffee-bean.svg",
+      "name": "Best quality",
+      "description": "Discover an endless variety of the world’s best artisan coffee from each of our roasters."
+    },
+    {
+      "key": "r2",
+      "img": "assets/home/desktop/icon-gift.svg",
+      "name": "Exclusive benefits",
+      "description": "Special offers and swag when you subscribe, including 30% off your first shipment."
+    },
+    {
+      "key": "r3",
+      "img": "assets/home/desktop/icon-truck.svg",
+      "name": "Free shipping",
+      "description": "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed."
+    }
+  ],
+  "steps": [
+    {
+      "key": "s1",
+      "number": "01",
+      "name": "Pick your coffee",
+      "description": "Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out."
+    },
+    {
+      "key": "s2",
+      "number": "02",
+      "name": "Choose the frequency",
+      "description": "Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal."
+    },
+    {
+      "key": "s3",
+      "number": "03",
+      "name": "Receive and enjoy!",
+      "description": "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience."
+    }
+  ]
+}

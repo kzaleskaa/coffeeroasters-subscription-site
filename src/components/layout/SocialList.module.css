@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.socials li:hover {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(23%) saturate(586%)
+    hue-rotate(323deg) brightness(104%) contrast(98%);
+}
+
+@media (min-width: 1024px) {
+  .socials {
+    column-gap: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .socials {
+    column-gap: 18px;
+  }
+}

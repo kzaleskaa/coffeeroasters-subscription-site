@@ -1,0 +1,37 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.work h2 {
+  color: var(--grey);
+  margin-bottom: 36px;
+}
+
+.work h3 {
+  color: var(--dark-grey-blue);
+}
+
+.create-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  width: 216px;
+  height: 57px;
+  background-color: var(--dark-cyan);
+  color: var(--light-cream);
+  border-radius: 10px;
+  font-family: "Fraunces", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .work {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,28 @@
+.headquarters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.headquarters h2 {
+  color: var(--grey);
+  margin-bottom: 40px;
+}
+
+.headquarter {
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .headquarters {
+    text-align: left;
+  }
+  .headquarters .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

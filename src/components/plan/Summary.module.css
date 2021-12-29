@@ -1,0 +1,26 @@
+.order-summary {
+  background-color: var(--dark-grey-blue);
+  color: var(--light-cream);
+  padding: 15px;
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+button {
+  background-color: var(--dark-cyan);
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  color: var(--light-cream);
+}
+
+@media (min-width: 768px) {
+  .order-summary {
+    padding: 25px;
+  }
+}
