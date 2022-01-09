@@ -5,6 +5,7 @@ import styles from "./Summary.module.css";
 import SummaryText from "./SummaryText";
 
 const Summary = (props) => {
+
   return (
     <Modal onCloseModal={props.onCloseModal}>
       <div className={styles["order-summary"]}>

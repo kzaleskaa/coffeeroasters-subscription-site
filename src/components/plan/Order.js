@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
+
 import { useState } from "react";
 import { Fragment } from "react/cjs/react.production.min";
 
@@ -6,14 +9,13 @@ import Summary from "./Summary";
 import SummaryText from "./SummaryText";
 
 const Order = (props) => {
+  const cartCtx = useContext(CartContext);
+
   const [indexIsActive, setIndexIsActive] = useState(1);
-  const [chosenOptions, setChosenOptions] = useState([
-    "Capsule",
-    "Single origin",
-    "250g",
-    "Wholebean",
-    "Every weeke",
-  ]);
+
+  const chosenOptions = cartCtx.details.map((item) => item.name);
+
+  console.log(chosenOptions);
 
   const changeActiveIndexHandler = (event) => {
     setIndexIsActive((prevState) =>
@@ -21,11 +23,11 @@ const Order = (props) => {
     );
   };
 
-  function changeChoosenIndexHandler(event, index, name) {
-    let newArray = [...chosenOptions];
-    newArray[index] = name;
-    setChosenOptions(newArray);
+  function changeChoosenIndexHandler(event, details) {
+    cartCtx.updateDetail(details);
   }
+
+  console.log(cartCtx.details);
 
   return (
     <>
@@ -54,13 +56,22 @@ const Order = (props) => {
                 <div
                   key={option.id}
                   id={option.id}
+                  details={{
+                    preference: item.id,
+                    id: option.id,
+                    name: option.name,
+                  }}
                   className={`${styles.option} ${
                     chosenOptions[index] === option.name
                       ? styles["choosen-option"]
                       : ""
                   }`}
                   onClick={(event) =>
-                    changeChoosenIndexHandler(event, index, option.name)
+                    changeChoosenIndexHandler(event, {
+                      preference: item.id,
+                      id: option.id,
+                      name: option.name,
+                    })
                   }
                 >
                   <h4>{option.name}</h4>
@@ -71,7 +82,7 @@ const Order = (props) => {
           </div>
         );
       })}
-      <SummaryText />
+      <SummaryText/>
       <button onClick={props.onShowModal}>Create my plan!</button>
     </>
   );
