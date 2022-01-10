@@ -30,7 +30,7 @@ const Order = (props) => {
   console.log(cartCtx.details);
 
   return (
-    <>
+    <Fragment>
       {props.data.map((item, index) => {
         return (
           <div key={item.id} className={styles.choice}>
@@ -82,9 +82,12 @@ const Order = (props) => {
           </div>
         );
       })}
-      <SummaryText/>
-      <button onClick={props.onShowModal}>Create my plan!</button>
-    </>
+      <div className={styles["order-summary"]}>
+        <h3>Order summary</h3>
+        <SummaryText class={styles["summary-text"]} />
+      </div>
+      <button className={styles['btn-create']} onClick={props.onShowModal}>Create my plan!</button>
+    </Fragment>
   );
 };
 

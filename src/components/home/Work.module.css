@@ -17,12 +17,9 @@
 }
 
 .create-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   margin: 50px auto;
-  width: 216px;
-  height: 57px;
+  padding: 15px 25px;
   background-color: var(--dark-cyan);
   color: var(--light-cream);
   border-radius: 10px;

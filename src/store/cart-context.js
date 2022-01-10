@@ -14,7 +14,7 @@ const defaultDetails = [
   {
     preference: 3,
     optionId: "031",
-    name: "Capsule",
+    name: "250g",
   },
   {
     preference: 4,
@@ -43,7 +43,6 @@ export const CartContextProvider = (props) => {
 
     const existingDetailItem = detailsList[existingDetailIndex];
 
-    
     let updatedDetails = [...detailsList];
     const updatedDetail = {
       ...existingDetailItem,

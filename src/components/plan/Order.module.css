@@ -1,3 +1,7 @@
+h3 {
+  color: var(--grey);
+}
+
 .question {
   display: flex;
   flex-direction: row;
@@ -45,10 +49,37 @@
 
 .options.show {
   display: flex;
+  flex-direction: column;
+}
+
+.order-summary {
+  background-color: var(--dark-grey-blue);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 30px 0px;
+}
+
+.order-summary h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--grey);
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.order-summary .summary-text {
+  color: var(--light-cream);
+}
+
+.btn-create {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
 }
 
 @media (min-width: 768px) {
-  .options {
+  .options.show {
     flex-direction: row;
     column-gap: 10px;
   }
