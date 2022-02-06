@@ -78,6 +78,26 @@ h3 {
   padding: 10px 15px;
 }
 
+.details {
+  display: none;
+  color: var(--grey);
+}
+
+.details:not(:last-child) p {
+  font-family: "Fraunces", sans-serif;
+  border-bottom: 1px solid var(--grey);
+  cursor: pointer;
+  line-height: 3;
+}
+
+p.active {
+  color: var(--dark-grey-blue);
+}
+
+p.active span {
+  color: var(--dark-cyan);
+}
+
 @media (min-width: 768px) {
   .options.show {
     flex-direction: row;
@@ -85,5 +105,18 @@ h3 {
   }
   .option {
     width: 33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    justify-content: space-between;
+    column-gap: 100px;
+  }
+
+  .details {
+    display: block;
   }
 }

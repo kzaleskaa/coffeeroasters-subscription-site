@@ -2,10 +2,8 @@ import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 
 import { useState } from "react";
-import { Fragment } from "react/cjs/react.production.min";
 
 import styles from "./Order.module.css";
-import Summary from "./Summary";
 import SummaryText from "./SummaryText";
 
 const Order = (props) => {
@@ -30,64 +28,79 @@ const Order = (props) => {
   console.log(cartCtx.details);
 
   return (
-    <Fragment>
-      {props.data.map((item, index) => {
-        return (
-          <div key={item.id} className={styles.choice}>
-            <div
-              className={styles.question}
-              id={item.id}
-              onClick={changeActiveIndexHandler}
-            >
-              <h3 id={item.id}>{item.question}</h3>
+    <div className={styles.container}>
+      <div className={styles.details}>
+        {props.data.map((item) => (
+          <p
+            id={item.id}
+            onClick={changeActiveIndexHandler}
+            className={indexIsActive === item.id && styles.active}
+          >
+            <span>0{item.id}</span> {item.preference}
+          </p>
+        ))}
+      </div>
+      <div>
+        {props.data.map((item, index) => {
+          return (
+            <div key={item.id} className={styles.choice}>
               <div
-                className={`${styles.arrow} ${
+                className={styles.question}
+                id={item.id}
+                onClick={changeActiveIndexHandler}
+              >
+                <h3 id={item.id}>{item.question}</h3>
+                <div
+                  className={`${styles.arrow} ${
+                    indexIsActive === item.id ? styles.show : ""
+                  }`}
+                  id={item.id}
+                ></div>
+              </div>
+              <div
+                className={`${styles.options} ${
                   indexIsActive === item.id ? styles.show : ""
                 }`}
-                id={item.id}
-              ></div>
-            </div>
-            <div
-              className={`${styles.options} ${
-                indexIsActive === item.id ? styles.show : ""
-              }`}
-            >
-              {item.options.map((option) => (
-                <div
-                  key={option.id}
-                  id={option.id}
-                  details={{
-                    preference: item.id,
-                    id: option.id,
-                    name: option.name,
-                  }}
-                  className={`${styles.option} ${
-                    chosenOptions[index] === option.name
-                      ? styles["choosen-option"]
-                      : ""
-                  }`}
-                  onClick={(event) =>
-                    changeChoosenIndexHandler(event, {
+              >
+                {item.options.map((option) => (
+                  <div
+                    key={option.id}
+                    id={option.id}
+                    details={{
                       preference: item.id,
                       id: option.id,
                       name: option.name,
-                    })
-                  }
-                >
-                  <h4>{option.name}</h4>
-                  <p>{option.about}</p>
-                </div>
-              ))}
+                    }}
+                    className={`${styles.option} ${
+                      chosenOptions[index] === option.name
+                        ? styles["choosen-option"]
+                        : ""
+                    }`}
+                    onClick={(event) =>
+                      changeChoosenIndexHandler(event, {
+                        preference: item.id,
+                        id: option.id,
+                        name: option.name,
+                      })
+                    }
+                  >
+                    <h4>{option.name}</h4>
+                    <p>{option.about}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        );
-      })}
-      <div className={styles["order-summary"]}>
-        <h3>Order summary</h3>
-        <SummaryText class={styles["summary-text"]} />
+          );
+        })}
+        <div className={styles["order-summary"]}>
+          <h3>Order summary</h3>
+          <SummaryText class={styles["summary-text"]} />
+        </div>
+        <button className={styles["btn-create"]} onClick={props.onShowModal}>
+          Create my plan!
+        </button>
       </div>
-      <button className={styles['btn-create']} onClick={props.onShowModal}>Create my plan!</button>
-    </Fragment>
+    </div>
   );
 };
 
