@@ -5,6 +5,8 @@ import { useState } from "react";
 
 import styles from "./Order.module.css";
 import SummaryText from "./SummaryText";
+import Details from "./Details";
+import Option from "./Option";
 
 const Order = (props) => {
   const cartCtx = useContext(CartContext);
@@ -31,65 +33,24 @@ const Order = (props) => {
     <div className={styles.container}>
       <div className={styles.details}>
         {props.data.map((item) => (
-          <p
-            id={item.id}
-            onClick={changeActiveIndexHandler}
-            className={indexIsActive === item.id && styles.active}
-          >
-            <span>0{item.id}</span> {item.preference}
-          </p>
+          <Details
+            item={item}
+            changeActiveIndexHandler={changeActiveIndexHandler}
+            indexIsActive={indexIsActive}
+          />
         ))}
       </div>
       <div>
         {props.data.map((item, index) => {
           return (
-            <div key={item.id} className={styles.choice}>
-              <div
-                className={styles.question}
-                id={item.id}
-                onClick={changeActiveIndexHandler}
-              >
-                <h3 id={item.id}>{item.question}</h3>
-                <div
-                  className={`${styles.arrow} ${
-                    indexIsActive === item.id ? styles.show : ""
-                  }`}
-                  id={item.id}
-                ></div>
-              </div>
-              <div
-                className={`${styles.options} ${
-                  indexIsActive === item.id ? styles.show : ""
-                }`}
-              >
-                {item.options.map((option) => (
-                  <div
-                    key={option.id}
-                    id={option.id}
-                    details={{
-                      preference: item.id,
-                      id: option.id,
-                      name: option.name,
-                    }}
-                    className={`${styles.option} ${
-                      chosenOptions[index] === option.name
-                        ? styles["choosen-option"]
-                        : ""
-                    }`}
-                    onClick={(event) =>
-                      changeChoosenIndexHandler(event, {
-                        preference: item.id,
-                        id: option.id,
-                        name: option.name,
-                      })
-                    }
-                  >
-                    <h4>{option.name}</h4>
-                    <p>{option.about}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Option
+              item={item}
+              index={index}
+              changeActiveIndexHandler={changeActiveIndexHandler}
+              indexIsActive={indexIsActive}
+              chosenOptions={chosenOptions}
+              changeChoosenIndexHandler={changeChoosenIndexHandler}
+            />
           );
         })}
         <div className={styles["order-summary"]}>

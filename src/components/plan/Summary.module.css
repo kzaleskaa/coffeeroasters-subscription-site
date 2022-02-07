@@ -17,6 +17,7 @@ button {
   padding: 6px;
   border-radius: 5px;
   color: var(--light-cream);
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
