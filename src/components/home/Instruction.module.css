@@ -1,5 +1,6 @@
 .instruction {
   padding: 40px;
+  margin-top: 20px;
   border-radius: 10px;
 }
 
@@ -13,8 +14,8 @@
 }
 
 .step {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   row-gap: 36px;
 }
 
@@ -55,6 +56,9 @@
     background-color: white;
     transform: translateY(-50%);
   }
+  .instruction {
+    margin: 20px 0px;
+  }
   .instruction.dark span {
     background-color: transparent;
   }
@@ -72,5 +76,11 @@
     position: absolute;
     top: 0;
     left: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .instruction {
+    margin: 24px 0px;
   }
 }

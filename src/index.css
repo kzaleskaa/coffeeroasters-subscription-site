@@ -30,9 +30,20 @@ img {
 }
 
 a,
+button {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+a,
 a:hover {
   text-decoration: none;
   color: inherit;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
 }
 
 section {
@@ -48,7 +59,7 @@ h4 {
 
 p {
   font-family: "Barlow", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -60,23 +71,30 @@ h3 {
   font-size: 26px;
 }
 
+body {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   h2 {
-    font-size: 48px;
+    font-size: 36px;
   }
   h3 {
-    font-size: 30px;
+    font-size: 28px;
   }
   p {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1440px) {
   h2 {
-    font-size: 68px;
+    font-size: 48px;
+    margin-bottom: 20px;
   }
   p {
-    font-size: 24px;
+    font-size: 20px;
   }
 }

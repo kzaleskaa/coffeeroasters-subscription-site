@@ -1,0 +1,16 @@
+.option.choice {
+  background-color: var(--dark-cyan);
+}
+
+.option {
+  background-color: var(--light-cream);
+  padding: 20px;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.option:hover {
+  background-color: var(--pale-orange);
+}

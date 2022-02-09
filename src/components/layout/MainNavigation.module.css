@@ -7,6 +7,8 @@
   bottom: 0;
   background: white;
   text-align: center;
+  margin-inline: -5px;
+  z-index: 2;
 }
 
 .nav ul li {
@@ -25,6 +27,7 @@
 
 .nav input[type="checkbox"]:checked + ul {
   display: block;
+  height: 100vh;
 }
 
 .mobile {
@@ -42,7 +45,8 @@
     column-gap: 10px;
   }
 
-  .nav ul {
+  .nav ul,
+  .nav input[type="checkbox"]:checked + ul {
     position: relative;
     top: 0;
     bottom: 0;

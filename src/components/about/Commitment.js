@@ -1,8 +1,10 @@
+import styles from "./Commitment.module.css";
+
 const Commitment = () => {
   return (
-    <section>
-      <img scr="" alt="" />
-      <div>
+    <section className={styles.commitment}>
+      <div className={styles.image}></div>
+      <div className={styles.content}>
         <h2>Our commitment</h2>
         <p>
           We’re built on a simple mission and a commitment to doing good along

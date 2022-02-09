@@ -1,0 +1,7 @@
+p.active {
+  color: var(--dark-grey-blue);
+}
+
+p.active span {
+  color: var(--dark-cyan);
+}

@@ -1,0 +1,42 @@
+.question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+.arrow {
+  height: 10px;
+  aspect-ratio: 1/1;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  transition: 0.4s;
+}
+
+.arrow.show {
+  transform: rotate(44deg);
+}
+
+.options {
+  display: none;
+}
+
+.options.show {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .options.show {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .option {
+    width: 33%;
+  }
+}

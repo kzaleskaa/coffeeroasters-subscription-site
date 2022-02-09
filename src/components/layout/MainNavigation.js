@@ -10,9 +10,8 @@ import close from "../../assets/shared/mobile/icon-close.svg";
 const MainNavigation = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  const mobileMenuHandler = () => {
-    setShowMobileMenu(!showMobileMenu);
-  };
+  document.body.style.maxHeight = showMobileMenu ? "100vh" : "auto";
+  document.body.style.overflowY = showMobileMenu ? "hidden" : "auto";
 
   return (
     <nav className={styles.nav}>
@@ -23,13 +22,15 @@ const MainNavigation = () => {
         id="dropdown"
         className="input-box"
         type="checkbox"
-        onChange={mobileMenuHandler}
+        checked={showMobileMenu}
+        onChange={() => setShowMobileMenu(!showMobileMenu)}
       />
       <ul>
         <li>
           <NavLink
             to="/home"
             className={(navData) => (navData.isActive ? styles.active : "")}
+            onClick={() => setShowMobileMenu(false)}
           >
             Home
           </NavLink>
@@ -38,6 +39,7 @@ const MainNavigation = () => {
           <NavLink
             to="/about"
             className={(navData) => (navData.isActive ? styles.active : "")}
+            onClick={() => setShowMobileMenu(false)}
           >
             About
           </NavLink>
@@ -46,6 +48,7 @@ const MainNavigation = () => {
           <NavLink
             to="/create-plan"
             className={(navData) => (navData.isActive ? styles.active : "")}
+            onClick={() => setShowMobileMenu(false)}
           >
             Create Plan
           </NavLink>
