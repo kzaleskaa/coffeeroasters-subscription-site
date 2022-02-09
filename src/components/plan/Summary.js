@@ -1,11 +1,9 @@
-import { Fragment } from "react/cjs/react.production.min";
 import Modal from "../UI/Modal";
 
 import styles from "./Summary.module.css";
 import SummaryText from "./SummaryText";
 
 const Summary = (props) => {
-
   return (
     <Modal onCloseModal={props.onCloseModal}>
       <div className={styles["order-summary"]}>

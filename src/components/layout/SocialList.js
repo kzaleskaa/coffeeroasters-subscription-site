@@ -4,17 +4,17 @@ const SocialList = () => {
   return (
     <ul className={styles.socials}>
       <li>
-        <a href="#">
+        <a href="/">
           <img src="assets/shared/desktop/icon-facebook.svg" alt="" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/">
           <img src="assets/shared/desktop/icon-twitter.svg" alt="" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="/">
           <img src="assets/shared/desktop/icon-instagram.svg" alt="" />
         </a>
       </li>

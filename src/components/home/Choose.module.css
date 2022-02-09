@@ -17,8 +17,8 @@
 }
 
 .reasons .reason {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
   row-gap: 36px;
@@ -30,6 +30,7 @@
 
 .reason img {
   max-width: 30%;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
