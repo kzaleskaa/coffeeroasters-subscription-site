@@ -35,6 +35,7 @@ The page will reload if you make edits.
 <div align="center">
 <img src="https://user-images.githubusercontent.com/62251989/153213800-30447bf0-4535-419b-8ddc-211a0b462e5d.gif" />
 </div>
+
 ## 🔨 Built with
 
 Project is created with:
