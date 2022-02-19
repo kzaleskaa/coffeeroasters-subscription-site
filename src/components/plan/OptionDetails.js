@@ -3,9 +3,7 @@ import styles from "./OptionDetails.module.css";
 const OptionDetails = (props) => {
   const { option, item, chosenOptions, index, changeChoosenIndexHandler } =
     props;
-  if (chosenOptions[index] === option.name) {
-    console.log(option.name);
-  }
+
   return (
     <div
       key={option.id}

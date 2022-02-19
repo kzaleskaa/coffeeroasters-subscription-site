@@ -15,8 +15,6 @@ const Order = (props) => {
 
   const chosenOptions = cartCtx.details.map((item) => item.name);
 
-  console.log(chosenOptions);
-
   const changeActiveIndexHandler = (event) => {
     setIndexIsActive((prevState) =>
       prevState === Number(event.target.id) ? "" : Number(event.target.id)
