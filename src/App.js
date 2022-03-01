@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, Routes, Navigate } from "react-router";
-import { Oval } from "react-loader-spinner";
+import * as Loader from "react-loader-spinner";
 
 import Layout from "./components/layout/Layout";
 
@@ -10,13 +10,14 @@ const CreatePlan = React.lazy(() => import("./pages/CreatePlan"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 function App() {
-  const style = { margin: "0 auto" };
+  const style = { display: "flex", justifyContent: "center" };
+
   return (
     <Layout>
       <Suspense
         fallback={
           <div style={style}>
-            <Oval color="#0e8784" height={80} width={80} />
+            <Loader.TailSpin color="#4c4c4c" height={70} width={70} />
           </div>
         }
       >
